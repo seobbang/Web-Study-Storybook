@@ -15,6 +15,7 @@ export default function TaskList({ loading, tasks, onPinTask, onArchiveTask }) {
       </span>
     </div>
   );
+  // 로딩중일 때
   if (loading) {
     return (
       <div className="list-items" data-testid="loading" key={"loading"}>
@@ -27,6 +28,7 @@ export default function TaskList({ loading, tasks, onPinTask, onArchiveTask }) {
       </div>
     );
   }
+  // task가 없을 때
   if (tasks.length === 0) {
     return (
       <div className="list-items" key={"empty"} data-testid="empty">
